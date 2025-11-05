@@ -12,7 +12,7 @@ g=9.81
 p0=1013
 R=287.1
 cp=1005
-
+kappa=0.41
 #define fluctuations and so on
 data['u_fluc']=data['u']-np.mean(data['u'])
 data['v_fluc']=data['v']-np.mean(data['v']
