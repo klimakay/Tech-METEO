@@ -35,6 +35,12 @@ data['theta_star']=-(np.mean(data['thetaw'])/data['u_star'])
 data['L']=(data['u_star'])**3 /(kappa*g/data['theta']*np.mean(data['thetaw']))
 data['zeta']=data['z']/data['L']
 
+# define X and X_0
+data['X']=(1-15*data['zeta'])**(-1/4)
+data['X_0']=(1-15*z_0/(data['L']))**(-1/4)
+
+
+
 
 
 
