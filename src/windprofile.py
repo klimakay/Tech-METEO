@@ -27,5 +27,10 @@ data['uw']=np.mean(data['u_fluc']*data[w_fluc])
 data['uv']=np.mean(data['u_fluc']*data['v_fluc'])
 data['thetaw']=np.mean(data['theta']*data['w_fluc']))
 
+# define shear stress rate and characteristic temperature
+data['u_star']=((np.mean(data['uw']))**2+(np.mean(data['uv']))**2)**(1/4)
+data['theta_star']=-(np.mean(data['thetaw'])/data['u_star'])
+
+
 
 
