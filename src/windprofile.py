@@ -13,6 +13,11 @@ p0=1013
 R=287.1
 cp=1005
 
+#define fluctuations and so on
+data['u_fluc']=data['u']-np.mean(data['u'])
+data['v_fluc']=data['v']-np.mean(data['v']
+data['w_fluc']=data['w']-np.mean(data['w'])
+
 # define potential temperature
 data['theta']=data['T']*(data['p']/p0)**(R/cp)
 
