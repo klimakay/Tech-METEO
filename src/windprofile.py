@@ -13,3 +13,6 @@ p0=1013
 R=287.1
 cp=1005
 
+# define potential temperature
+data['theta']=data['T']*(data['p']/p0)**(R/cp)
+
