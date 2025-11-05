@@ -31,6 +31,13 @@ data['thetaw']=np.mean(data['theta']*data['w_fluc']))
 data['u_star']=((np.mean(data['uw']))**2+(np.mean(data['uv']))**2)**(1/4)
 data['theta_star']=-(np.mean(data['thetaw'])/data['u_star'])
 
+# obukhov-length and vertical coordinate zeta
+data['L']=(data['u_star'])**3 /(kappa*g/data['theta']*np.mean(data['thetaw']))
+data['zeta']=data['z']/data['L']
+
+
+
+
 
 
 
