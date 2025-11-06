@@ -49,10 +49,15 @@ def u_speed(z):
     :return: u_speed
     """
     if data['zeta']<=0:
-        u_speed=u_star/kappa*(np.ln(z/z0)-2*np.ln((1+X)/1+X_0)-np.ln((1+X**2)/1+X_0**2)+2*np.arctan2(X)-2*np.arctan2(X_0))
-    elif data['zeta']>=0 and data['zeta']<=0.5:
-        u_speed=u_star/kappa*(np.ln(z/z0)+5*(z-z0/L))
+        u_speed=u_star/kappa*(np.log(z/z0)-2*np.log((1+X)/1+X_0)-np.log((1+X**2)/1+X_0**2)+2*np.arctan2(X)-2*np.arctan2(X_0))
+    elif data['zeta']>=0 and data['zeta']<0.5:
+        u_speed=u_star/kappa*(np.log(z/z0)+5*(z-z0/L))
+    elif data['zeta']>=0.5 and data['zeta']<10:
+        u_speed=u_star/kappa*(8*np.log(2*z/L)+4.25*(z/L)**(-1)-0.5*(z/L)**(-2)-np.log(2*z0/L)-5*(z0/L)-4)
+    else:
+        u_speed=u_star/kappa*(0.7585*(z/L)+8*np.log(20)-11.165-np.log(2*z0/L)-5*(z0/L))
     return u_speed
+
 
 
 
