@@ -39,6 +39,20 @@ data['zeta']=data['z']/data['L']
 data['X']=(1-15*(data['zeta']))**(-1/4)
 data['X_0']=(1-15*(z_0/(data['L'])))**(-1/4)
 
+def u_speed(data, z0, kappa):
+    """
+    function which computes the wind speed in direction of u depending on the stability
+    :param data: all data from pandas input
+    :param z0: roughness length
+    :param kappa: von_karman constant
+    :return: u_speed
+    """
+    if data['zeta']<=0:
+        u_speed=data['u_star']/kappa*(np.ln(data['z']/z0)-2*np.ln((1+data['X'])/1+data['X_0'])-np.ln((1+data['X']**2)/1+data['X_0']**2)+2*np.arctan2(data['X'])-2*np.arctan2(data['X_0']))
+    elif data['zeta']>=0 and data['zeta']<=0.5:
+        u_speed=data['u_star']/kappa*(np.ln(data['z']/z0)+5*(data['z']-z0/data['L']))
+    return u_speed
+
 
 
 
