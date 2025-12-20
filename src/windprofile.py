@@ -5,7 +5,7 @@ All functions and plots are stored and created here for the wind profiles
 import numpy as np
 import matplotlib.pyplot as plt
 
-#define constants for now
+# define constants for now
 u_A=3.0
 z_A=10
 
