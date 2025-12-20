@@ -20,5 +20,3 @@ def u(u_A,z,z_A,m):
     u=u_A*(z/z_A)**m
     return u
 
-#test
-print(u(u_A,10,z_A,m_rural))
