@@ -16,17 +16,7 @@ m_city = {"I": 0.52, "III/2": 0.31}
 # define the height for the wind profile
 z=np.linspace(0,200,50)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def u(u_A,z,z_A,m):
+    for m in [m_rural,m_city]:
+        u=u_A*(z/z_A)**m
+    return u
