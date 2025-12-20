@@ -18,7 +18,7 @@ z=np.linspace(0,200,50)
 
 def u(u_A,z,z_A,m):
     """
-    function for calculationg the wind speed in different heights
+    function for calculation of the wind speed in different heights
     :param u_A: wind speed in reference height in m/s
     :param z: height in m
     :param z_A: reference height in m
