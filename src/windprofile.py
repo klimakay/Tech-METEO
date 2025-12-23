@@ -30,7 +30,7 @@ def u(u_A,z,z_A,m):
     """
     u=u_A*(z/z_A)**m
     return u
-
+# initialize the functions
 u_ru = {}
 u_ci = {}
 
