@@ -31,5 +31,12 @@ def u(u_A,z,z_A,m):
     u=u_A*(z/z_A)**m
     return u
 
-u_rust10=u(u_A,z,z_A,m_rural["I"])
-u_run10=u(u_A,z,z_A,m_city["III/2"])
+u_ru = {}
+u_ci = {}
+
+for height in z_A:
+    u_ru[height]= {}
+    u_ci[height]= {}
+    for disp in disp_cat:
+        u_ru[height][disp] = u(u_A[str(height)],z,height,m_rural[disp])
+        u_ci[height][disp] = u(u_A[str(height)],z,height,m_city[disp])
