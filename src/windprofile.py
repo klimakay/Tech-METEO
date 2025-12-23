@@ -4,6 +4,7 @@ All functions and plots are stored and created here for the wind profiles
 
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 # define constants for now
 u_A= {"10": 3.0, "50": 6.0}
@@ -30,13 +31,33 @@ def u(u_A,z,z_A,m):
     """
     u=u_A*(z/z_A)**m
     return u
-
+# initialize the functions
 u_ru = {}
 u_ci = {}
 
+# defining the concrete functions for different heights and stability criteria
 for height in z_A:
     u_ru[height]= {}
     u_ci[height]= {}
     for disp in disp_cat:
         u_ru[height][disp] = u(u_A[str(height)],z,height,m_rural[disp])
         u_ci[height][disp] = u(u_A[str(height)],z,height,m_city[disp])
+
+# Plot
+plt.figure(1, figsize=(10,5), dpi=300)
+plt.plot(u_ru[10]["I"],z,label="Land,I")
+plt.plot(u_ru[10]["III/2"],z,label="Land,III/2")
+plt.xlabel("Windgeschwindigkeit in m/s")
+plt.ylabel("Höhe über Grund in m")
+plt.legend()
+plt.grid()
+plt.show()
+
+plt.figure(2, figsize=(10,5), dpi=300)
+plt.plot(u_ci[10]["I"],z,label="Stadt,I")
+plt.plot(u_ci[10]["III/2"],z,label="Stadt,III/2")
+plt.xlabel("Windgeschwindigkeit in m/s")
+plt.ylabel("Höhe über Grund in m")
+plt.legend()
+plt.grid()
+plt.show()
