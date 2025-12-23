@@ -6,12 +6,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # define constants for now
-u_A=3.0
-z_A=10
+u_A= {"10": 3.0, "50": 6.0}
+z_A=[10,50]
 
 # define dictionaries for roughness in rural and city areas only for considered atmospheric conditions
 m_rural = {"I": 0.37, "III/2": 0.18}
 m_city = {"I": 0.52, "III/2": 0.31}
+
+# define the dispersion categories
+disp_cat=["I", "III/2"]
 
 # define the height for the wind profile
 z=np.linspace(0,200,50)
@@ -28,3 +31,12 @@ def u(u_A,z,z_A,m):
     u=u_A*(z/z_A)**m
     return u
 
+u_ru = {}
+u_ci = {}
+
+for height in z_A:
+    u_ru[height]= {}
+    u_ci[height]= {}
+    for disp in disp_cat:
+        u_ru[height][disp] = u(u_A[str(height)],z,height,m_rural[disp])
+        u_ci[height][disp] = u(u_A[str(height)],z,height,m_city[disp])
