@@ -4,6 +4,7 @@ All functions and plots are stored and created here for the wind profiles
 
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 # define constants for now
 u_A= {"10": 3.0, "50": 6.0}
