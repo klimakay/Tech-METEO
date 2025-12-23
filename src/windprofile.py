@@ -6,8 +6,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # define constants for now
-u_A=3.0
-z_A=10
+u_A= {"10": 3.0, "50": 6.0}
+z_A=[10,50]
 
 # define dictionaries for roughness in rural and city areas only for considered atmospheric conditions
 m_rural = {"I": 0.37, "III/2": 0.18}
