@@ -28,3 +28,5 @@ def u(u_A,z,z_A,m):
     u=u_A*(z/z_A)**m
     return u
 
+u_rust10=u(u_A,z,z_A,m_rural["I"])
+u_run10=u(u_A,z,z_A,m_city["III/2"])
