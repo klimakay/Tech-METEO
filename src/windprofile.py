@@ -34,6 +34,7 @@ def u(u_A,z,z_A,m):
 u_ru = {}
 u_ci = {}
 
+# defining the concrete functions for different heights and stability criteria
 for height in z_A:
     u_ru[height]= {}
     u_ci[height]= {}
