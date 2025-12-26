@@ -6,6 +6,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+# define the output path for the plots
+BASE_DIR = Path(__file__).resolve().parent.parent
+output_path = BASE_DIR / 'output'
+# if directory is not there
+output_path.mkdir(parents=True, exist_ok=True)
+
+# define the output plots
+output_file_land = "windprofil land.png"
+output_file_city = "windprofil city.png"
+
 # define constants for now
 u_A= {"10": 3.0, "50": 6.0}
 z_A=[10,50]
@@ -51,7 +61,8 @@ plt.xlabel("Windgeschwindigkeit in m/s")
 plt.ylabel("Höhe über Grund in m")
 plt.legend()
 plt.grid()
-plt.show()
+plt.savefig(output_path/output_file_land)
+#plt.show()
 
 plt.figure(2, figsize=(10,5), dpi=300)
 plt.plot(u_ci[10]["I"],z,label="Stadt,I")
@@ -60,4 +71,5 @@ plt.xlabel("Windgeschwindigkeit in m/s")
 plt.ylabel("Höhe über Grund in m")
 plt.legend()
 plt.grid()
-plt.show()
+plt.savefig(output_path/output_file_city)
+#plt.show()
