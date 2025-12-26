@@ -6,6 +6,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
 
+# define the output path for the plots
+BASE_DIR = Path(__file__).resolve().parent.parent
+output_path = BASE_DIR / 'output'
+# if directory is not there
+output_path.mkdir(parents=True, exist_ok=True)
+
+# define the output plots
+output_file_land = "windprofil land.png"
+output_file_city = "windprofil city.png"
+
 # define constants for now
 u_A= {"10": 3.0, "50": 6.0}
 z_A=[10,50]
