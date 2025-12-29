@@ -16,7 +16,8 @@ output_path.mkdir(parents=True, exist_ok=True)
 output_file_land = "windprofil land.png"
 output_file_city = "windprofil city.png"
 
-# define constants for now
+# define constants
+# more information for chosen wind speed in reference height u_A is given in the report
 u_A= {"10": 3.0, "50": 6.0}
 z_A=[10,50]
 
