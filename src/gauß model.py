@@ -12,6 +12,8 @@ x=np.linspace(0,1000,100)
 
 disp_cat=["I", "III/2"]
 
+heights=[10,20,30,40,50]
+
 # define the gauß function
 def c(x,y,z,H,u,disp_cat):
     """
