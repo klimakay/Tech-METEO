@@ -33,3 +33,5 @@ def c(x,y,z,H,u,disp_cat):
     exp_z=np.exp(-0.5*(z-H/sigma_z)**2)+np.exp(-0.5*(z+H/sigma_z)**2)
     c=Quellterm*exp_y*exp_z
     return c
+
+# ToDo: aus windprofile.py heights bestimmen
