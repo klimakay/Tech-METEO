@@ -10,6 +10,8 @@ g={"I":0.662,"III/2":0.996}
 #define the distance from the source
 x=np.linspace(0,1000,100)
 
+disp_cat=["I", "III/2"]
+
 # define the gauß function
 def c(x,y,z,H,u,disp_cat):
     """
