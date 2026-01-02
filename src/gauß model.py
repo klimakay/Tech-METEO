@@ -10,7 +10,7 @@ g={"I":0.662,"III/2":0.996}
 #define the distance from the source
 x=np.linspace(0,1000,100)
 # define the gauß function
-def C(x,y,z,H,u,disp_cat):
+def c(x,y,z,H,u,disp_cat):
     """
 
     :param x: longitude coordinate
