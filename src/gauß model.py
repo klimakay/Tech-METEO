@@ -34,4 +34,4 @@ def c(x,y,z,H,u,disp_cat):
     c=Quellterm*exp_y*exp_z
     return c
 
-# ToDo: aus windprofile.py heights bestimmen
+# for next time: wind speed from wind profile for heights
