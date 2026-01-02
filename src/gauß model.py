@@ -26,4 +26,5 @@ def C(x,y,z,H,u,disp_cat):
     Quellterm=100/(u*2*np.pi*sigma_y*sigma_z)
     exp_y=np.exp(-(y**2)/2*sigma_y**2)
     exp_z=np.exp(-0.5*(z-H/sigma_z)**2)+np.exp(-0.5*(z+H/sigma_z)**2)
-    return Quellterm*exp_y*exp_z
+    c=Quellterm*exp_y*exp_z
+    return c
