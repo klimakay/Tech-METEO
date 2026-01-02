@@ -1,6 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#define constants for effective plum heights up to 50 m
+F={"I":1.294,"III/2":0.695}
+G={"I":0.241,"III/2":0.165}
+f={"I":0.718,"III/2":0.807}
+g={"I":0.662,"III/2":0.996}
+
+#define the distance from the source
+x=np.linspace(0,1000,100)
 # define the gauß function
 def C(x,y,z,H,u,disp_cat):
     """
