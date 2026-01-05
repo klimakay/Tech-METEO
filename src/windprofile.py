@@ -62,7 +62,7 @@ for hoehe in [10,20,30,40,50]:
     print(u_direct)
 # Output: [10: 4.61, 20: 5.22, 30: 5.61, 40: 5.91, 50: 6.15]
 
-# Plot
+# Plot only for stable/neutral conditions
 plt.figure(1, figsize=(10,5), dpi=300)
 plt.plot(u_ru[10]["I"],z,label="Land,I")
 plt.plot(u_ru[10]["III/2"],z,label="Land,III/2")
