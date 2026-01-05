@@ -58,7 +58,7 @@ for height in z_A:
         u_ci[height][disp] = u(u_A[str(height)],z,height,m_city[disp])
 
 # print the wind speed for specific heights for later input for the gauß-model
-u_32 = {}
+u_all = {}
 for hoehe in [10,20,30,40,50]:
     u_32[hoehe] = {}
     for all in all_class:
