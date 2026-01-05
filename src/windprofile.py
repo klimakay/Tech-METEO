@@ -63,7 +63,11 @@ for hoehe in [10,20,30,40,50]:
     for all in all_class:
         u_32[hoehe][all] = round(u(u_A["10"],hoehe,10,m_rural[all]),2)
         print(u_32)
-# Output: III/2: [10: 3.0, 20: 3.4, 30: 3.66, 40: 3.85, 50: 4.01]
+# Output: {10: {'I': 3.0, 'II': 3.0, 'III/1': 3.0, 'III/2': 3.0, 'IV': 3.0, 'V': 3.0},
+# 20: {'I': 3.88, 'II': 3.74, 'III/1': 3.59, 'III/2': 3.4, 'IV': 3.31, 'V': 3.26},
+# 30: {'I': 4.5, 'II': 4.26, 'III/1': 3.99, 'III/2': 3.66, 'IV': 3.5, 'V': 3.42},
+# 40: {'I': 5.01, 'II': 4.67, 'III/1': 4.3, 'III/2': 3.85, 'IV': 3.64, 'V': 3.54},
+# 50: {'I': 5.44, 'II': 5.02, 'III/1': 4.56, 'III/2': 4.01, 'IV': 3.76, 'V': 3.64}}
 
 # Plot only for stable/neutral conditions
 plt.figure(1, figsize=(10,5), dpi=300)
