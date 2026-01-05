@@ -56,6 +56,12 @@ for height in z_A:
         u_ru[height][disp] = u(u_A[str(height)],z,height,m_rural[disp])
         u_ci[height][disp] = u(u_A[str(height)],z,height,m_city[disp])
 
+# print the wind speed for specific heights for later input for the gauß-model
+for hoehe in [10,20,30,40,50]:
+    u_direct = u(u_A["150"],hoehe,150,m_rural["III/2"])
+    print(u_direct)
+
+
 # Plot
 plt.figure(1, figsize=(10,5), dpi=300)
 plt.plot(u_ru[10]["I"],z,label="Land,I")
