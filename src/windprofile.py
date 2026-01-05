@@ -18,8 +18,8 @@ output_file_city = "windprofil city.png"
 
 # define constants
 # more information for chosen wind speed in reference height u_A is given in the report
-u_A= {"10": 3.0, "50": 6.0}
-z_A=[10,50]
+u_A= {"10": 3.0, "50": 6.0, "150":7.5}
+z_A=[10,50,150]
 
 # define dictionaries for roughness in rural and city areas only for considered atmospheric conditions
 m_rural = {"I": 0.37, "III/2": 0.18}
