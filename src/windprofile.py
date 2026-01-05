@@ -59,9 +59,11 @@ for height in z_A:
 # print the wind speed for specific heights for later input for the gauß-model
 u_32 = {}
 for hoehe in [10,20,30,40,50]:
-    u_direct = u(u_A["150"],hoehe,150,m_rural["III/2"])
-    print(u_direct)
-# Output: [10: 4.61, 20: 5.22, 30: 5.61, 40: 5.91, 50: 6.15]
+    u_32[hoehe] = {}
+    for disp in disp_cat:
+        u_32[hoehe][disp] = round(u(u_A["10"],hoehe,10,m_rural[disp]),2)
+        print(u_32)
+# Output: III/2: [10: 3.0, 20: 3.4, 30: 3.66, 40: 3.85, 50: 4.01]
 
 # Plot only for stable/neutral conditions
 plt.figure(1, figsize=(10,5), dpi=300)
