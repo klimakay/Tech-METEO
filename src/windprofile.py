@@ -60,7 +60,7 @@ for height in z_A:
 for hoehe in [10,20,30,40,50]:
     u_direct = u(u_A["150"],hoehe,150,m_rural["III/2"])
     print(u_direct)
-
+# Output: [10: 4.61, 20: 5.22, 30: 5.61, 40: 5.91, 50: 6.15]
 
 # Plot
 plt.figure(1, figsize=(10,5), dpi=300)
