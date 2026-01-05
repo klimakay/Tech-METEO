@@ -24,8 +24,8 @@ u_A= {"10": 3.0, "50": 6.0, "150":7.5}
 z_A=[10,50,150]
 
 # define dictionaries for roughness in rural and city areas only for considered atmospheric conditions
-m_rural = {"I": 0.37, "III/2": 0.18}
-m_city = {"I": 0.52, "III/2": 0.31}
+m_rural = {"I": 0.37, "II": 0.32, "III/1": 0.26, "III/2": 0.18, "IV": 0.14, "V": 0.12}
+m_city = {"I": 0.52, "II": 0.48, "III/1": 0.31, "III/2": 0.31, "IV": 0.31, "V": 0.20}
 
 # define the dispersion categories
 disp_cat=["I", "III/2"]
