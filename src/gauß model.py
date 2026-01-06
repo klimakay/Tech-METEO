@@ -19,7 +19,7 @@ u = {
 #define the distance from the source
 x=np.linspace(0,1000,100)
 
-disp_cat=["I", "III/2"]
+disp_cat=["I", "II", "III/1", "III/2", "IV", "V"]
 
 heights=[10,20,30,40,50]
 
