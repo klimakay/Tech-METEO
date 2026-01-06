@@ -7,7 +7,7 @@ G={"I":0.241, "II": 0.264, "III/1": 0.215, "III/2":0.165, "IV": 0.127, "V": 0.15
 f={"I":0.718, "II": 0.754, "III/1": 0.784, "III/2":0.807, "IV": 0.823, "V": 0.833}
 g={"I":0.662, "II": 0.774, "III/1": 0.885, "III/2":0.996, "IV": 1.108, "V": 1.219}
 
-# wind speed for all heights
+# wind speed for all heights. for real values see windprofile.py
 u = {
     "I": [3.0,4.5,4.5,4.5,4.5],
     "II": [3.0,3.0,4.5,4.5,4.5],
