@@ -45,6 +45,7 @@ def c(x,y,z,H,u,disp_cat):
 
 # plot over all heights for all dispersion categories
 fig, axs = plt.subplots(2,3, sharex=True)
+plt.rc('legend', fontsize=8)
 axs = axs.flatten()
 for disp in range(len(disp_cat)):
     ax = axs[disp]
