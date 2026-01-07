@@ -63,5 +63,5 @@ for disp in range(len(disp_cat)):
         plt.title(f"Ausbreitungsklasse {cat}")
         plt.xlabel("Entfernung von der Quelle in m")
         plt.ylabel("Emittierte Konzentration in Millionstel")
-        plt.legend()
-    plt.savefig(output_path/f"Ausbreitungskategorie 32 mit verschiedenen Emissionshöhen.png", dpi=300)
+    plt.legend()
+    plt.savefig(output_path/f"Ausbreitungskategorie {name_cat} mit verschiedenen Emissionshöhen.png", dpi=300)
