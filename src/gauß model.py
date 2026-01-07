@@ -54,6 +54,8 @@ def c(x,y,z,H,u,disp_cat):
 plt.rc('legend', fontsize=8)
 for disp in range(len(disp_cat)):
     cat = disp_cat[disp]
+    # new variable to ensure a correct file path to save the plot
+    name_cat = str(cat).replace("/","_")
     for height in range(len(heights)):
         H = heights[height]
         u_neu = u[cat][height]
