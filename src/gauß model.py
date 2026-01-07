@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from windprofile import BASE_DIR, output_path
 
 #define constants for effective plum heights up to 50 m
 F={"I":1.294, "II": 0.801, "III/1": 0.640, "III/2":0.695, "IV": 0.876, "V": 1.503}
