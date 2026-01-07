@@ -17,7 +17,7 @@ u = {
     "V": [3.0,3.0,3.0,3.0,3.0]}
 
 #define the distance from the source
-x=np.linspace(0,1000,100)
+x=np.linspace(1,1000,100)
 
 disp_cat=["I", "II", "III/1", "III/2", "IV", "V"]
 
