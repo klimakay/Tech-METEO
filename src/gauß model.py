@@ -43,3 +43,19 @@ def c(x,y,z,H,u,disp_cat):
     c=Quellterm*exp_y*exp_z
     return c
 
+# plot over all heights for all dispersion categories
+fig, axs = plt.subplots(2,3, sharex=True)
+axs = axs.flatten()
+for disp in range(len(disp_cat)):
+    ax = axs[disp]
+    cat = disp_cat[disp]
+    for height in range(len(heights)):
+        H = heights[height]
+        u_neu = u[cat][height]
+        ax.plot(x,c(x,0,0,H, u_neu,disp_cat[disp]), label=f"{H} m Emissionshöhe")
+        ax.set_title(f"Ausbreitungsklasse {cat}")
+        ax.set_xlabel("Entfernung von der Quelle in m")
+        ax.set_ylabel("Konzentrationswerte in %")
+ax.legend()
+plt.show()
+#plt.savefig(output_path/f"Ausbreitungskategorie mit verschiedenen Emissionshöhen.png")
