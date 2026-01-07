@@ -1,6 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from windprofile import BASE_DIR, output_path
+from pathlib import Path
+
+# define the output path for the plots
+BASE_DIR = Path(__file__).resolve().parent.parent
+output_path = BASE_DIR / 'output'
+# if directory is not there
+output_path.mkdir(parents=True, exist_ok=True)
 
 #define constants for effective plum heights up to 50 m
 F={"I":1.294, "II": 0.801, "III/1": 0.640, "III/2":0.695, "IV": 0.876, "V": 1.503}
@@ -20,8 +26,8 @@ u = {
 #define the distance from the source
 x=np.linspace(1,1000,100)
 
-disp_cat=["I", "II", "III/1", "III/2", "IV", "V"]
-
+#disp_cat=["I", "II", "III/1", "III/2", "IV", "V"]
+disp_cat=["III/2"]
 heights=[10,20,30,40,50]
 
 # define the gauß function
@@ -45,19 +51,15 @@ def c(x,y,z,H,u,disp_cat):
     return c
 
 # plot over all heights for all dispersion categories
-fig, axs = plt.subplots(2,3, sharex=True)
 plt.rc('legend', fontsize=8)
-axs = axs.flatten()
 for disp in range(len(disp_cat)):
-    ax = axs[disp]
     cat = disp_cat[disp]
     for height in range(len(heights)):
         H = heights[height]
         u_neu = u[cat][height]
-        ax.plot(x,c(x,0,0,H, u_neu,cat), label=f"{H} m Emissionshöhe")
-        ax.set_title(f"Ausbreitungsklasse {cat}")
-        ax.set_xlabel("Entfernung von der Quelle in m")
-        ax.set_ylabel("Konzentrationswerte in %")
-ax.legend()
-plt.show()
-#plt.savefig(output_path/f"Ausbreitungskategorie mit verschiedenen Emissionshöhen.png")
+        plt.plot(x,c(x,0,0,H, u_neu,cat), label=f"{H} m Emissionshöhe")
+        plt.title(f"Ausbreitungsklasse {cat}")
+        plt.xlabel("Entfernung von der Quelle in m")
+        plt.ylabel("Emittierte Konzentration in Millionstel")
+        plt.legend()
+    plt.savefig(output_path/f"Ausbreitungskategorie 32 mit verschiedenen Emissionshöhen.png", dpi=300)
