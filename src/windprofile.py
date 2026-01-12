@@ -59,7 +59,7 @@ for height in z_A:
 
 # print the wind speed for specific heights for later input for the gauß-model
 u_all = {}
-for hoehe in [10,20,30,40,50]:
+for hoehe in [10,20,30,40,50,150]:
     u_all[hoehe] = {}
     for all in all_class:
         u_all[hoehe][all] = round(u(u_A["150"],hoehe,150,m_rural[all]),2)
