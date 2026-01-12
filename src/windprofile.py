@@ -62,7 +62,7 @@ u_all = {}
 for hoehe in [10,20,30,40,50]:
     u_all[hoehe] = {}
     for all in all_class:
-        u_all[hoehe][all] = round(u(u_A["10"],hoehe,10,m_city[all]),2)
+        u_all[hoehe][all] = round(u(u_A["150"],hoehe,150,m_rural[all]),2)
         print(u_all)
 # Output land: 10: {'I': 2.75, 'II': 3.15, 'III/1': 3.71, 'III/2': 4.61, 'IV': 5.13, 'V': 5.42},
 # 20: {'I': 3.56, 'II': 3.94, 'III/1': 4.44, 'III/2': 5.22, 'IV': 5.66, 'V': 5.89},
