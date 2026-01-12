@@ -93,6 +93,6 @@ for height in range(len(heights)):
     plt.clabel(contours, inline=True, fontsize=8, fmt='%.1f')
     plt.xlabel("Entfernung x von der Quelle in Windrichtung in m")
     plt.ylabel("Entfernung y von der Quelle senkrecht zur Windrichtung in m")
-    plt.title(f"{cat_new}, Höhe {H_new} m")
+    plt.title(f"Ausbreitungskategorie {cat_new}, Höhe {H_new} m, Land")
     plt.grid()
     plt.show()
