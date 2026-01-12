@@ -70,7 +70,7 @@ for disp in range(len(disp_cat)):
     for height in range(len(heights)):
         H = heights[height]
         u_neu = u[cat][height]
-        plt.plot(x,c(x,0,0,H, u_neu,cat), label=f"{H} m Emissionshöhe")
+        plt.plot(x,c(x,0,0,H, u_neu,cat)*1e6, label=f"{H} m Emissionshöhe")
         plt.title(f"Ausbreitungsklasse {cat}")
         plt.xlabel("Entfernung von der Quelle in m")
         plt.ylabel("Emittierte Konzentration in Millionstel")
