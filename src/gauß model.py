@@ -76,3 +76,23 @@ for disp in range(len(disp_cat)):
         plt.ylabel("Emittierte Konzentration in Millionstel")
     plt.legend()
     #plt.savefig(output_path/f"Ausbreitungskategorie {name_cat} mit verschiedenen Emissionshöhen.png", dpi=300)
+
+# plot the distribution of the emissions
+# define the lateral coordinate
+x=np.linspace(1,2100)
+y=np.linspace(-400,401)
+X,Y=np.meshgrid(x,y)
+
+for height in range(len(heights)):
+    H_new = heights[height]
+    cat_new = "III/2"
+    u_new = u[cat_new][height]
+    C = c(X, Y, 0, H_new, u_new, cat_new)*1e6
+    plt.figure()
+    contours = plt.contour(X, Y, C, levels=[1,2,3,4,8,12], colors='k')
+    plt.clabel(contours, inline=True, fontsize=8, fmt='%.1f')
+    plt.xlabel("Entfernung x von der Quelle in Windrichtung in m")
+    plt.ylabel("Entfernung y von der Quelle senkrecht zur Windrichtung in m")
+    plt.title(f"{cat_new}, Höhe {H_new} m")
+    plt.grid()
+    plt.show()
