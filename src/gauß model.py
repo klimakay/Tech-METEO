@@ -89,7 +89,7 @@ for height in range(len(heights)):
     u_new = u[cat_new][height]
     C = c(X, Y, 0, H_new, u_new, cat_new)*1e6
     plt.figure()
-    contours = plt.contour(X, Y, C, levels=[1,2,3,4,8,12], colors='k')
+    contours = plt.contour(X, Y, C, levels=[1,2,3,4,5,7,10,14,19,25], colors='k')
     plt.clabel(contours, inline=True, fontsize=8, fmt='%.1f')
     plt.xlabel("Entfernung x von der Quelle in Windrichtung in m")
     plt.ylabel("Entfernung y von der Quelle senkrecht zur Windrichtung in m")
