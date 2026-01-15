@@ -56,6 +56,10 @@ for height in z_A:
     for disp in disp_cat:
         u_ru[height][disp] = u(u_A[str(height)],z,height,m_rural[disp])
         u_ci[height][disp] = u(u_A[str(height)],z,height,m_city[disp])
+print(round(u(u_A[str(10)],50,10,m_rural["I"]),2))
+print(round(u(u_A[str(10)],50,10,m_rural["III/2"]),2))
+print(round(u(u_A[str(10)],50,10,m_city["I"]),2))
+print(round(u(u_A[str(10)],50,10,m_city["III/2"]),2))
 
 # print the wind speed for specific heights for later input for the gauß-model
 u_all = {}
