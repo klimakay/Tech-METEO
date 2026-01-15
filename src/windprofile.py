@@ -18,6 +18,7 @@ output_file_city = "windprofil city.png"
 output_file_land_height = "windprofil land height.png"
 output_file_city_height = "windprofil city height.png"
 output_10in1 ="windprofil 10in1.png"
+output_150in1 ="windprofil 150in1.png"
 
 # define constants
 # more information for chosen wind speed in reference height u_A is given in the report
