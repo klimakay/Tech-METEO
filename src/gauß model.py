@@ -94,6 +94,6 @@ for height in range(len(heights)):
     plt.xlabel("Entfernung x von der Quelle in Windrichtung in m")
     plt.ylabel("Entfernung y von der Quelle senkrecht zur Windrichtung in m")
     plt.title(f"Ausbreitungskategorie {cat_new}, Höhe {H_new} m, Land")
-    plt.xlim(-100,2100)
+    plt.xlim(-100,3500)
     plt.grid()
     plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new}.png",dpi=300)
