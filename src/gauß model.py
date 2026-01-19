@@ -97,4 +97,4 @@ for height in range(len(heights)):
     plt.title(f"Ausbreitungskategorie {cat_new}, Höhe {H_new} m, Land")
     plt.xlim(-100,3500)
     plt.grid()
-    plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new}.png",dpi=300)
+    plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new} Kategorie {newname_cat} Land.png",dpi=300)
