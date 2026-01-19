@@ -87,6 +87,7 @@ for height in range(len(heights)):
     H_new = heights[height]
     cat_new = "III/1"
     u_new = u[cat_new][height]
+    newname_cat = str(cat_new).replace("/", "_")
     C = c(X, Y, 0, H_new, u_new, cat_new)*1e6
     plt.figure()
     contours = plt.contour(X, Y, C, levels=[1,2,3,4,5,7,10,14,19,25], colors='k')
