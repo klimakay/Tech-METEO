@@ -84,17 +84,17 @@ for disp in range(len(disp_cat)):
 #X,Y=np.meshgrid(x,y)
 
 #for height in range(len(heights)):
-    #H_new = heights[height]
-    #cat_new = "III/1"
-    #u_new = u[cat_new][height]
-    #newname_cat = str(cat_new).replace("/", "_")
-    #C = c(X, Y, 0, H_new, u_new, cat_new)*1e6
-    #plt.figure()
-    #contours = plt.contour(X, Y, C, levels=[1,2,3,4,5,7,10,14,19,25], colors='k')
-    #plt.clabel(contours, inline=True, fontsize=8, fmt='%.1f')
-    #plt.xlabel("Entfernung x von der Quelle in Windrichtung in m")
-    #plt.ylabel("Entfernung y von der Quelle senkrecht zur Windrichtung in m")
-    #plt.title(f"Ausbreitungskategorie {cat_new}, Höhe {H_new} m, Land")
-    #plt.xlim(-100,3500)
-    #plt.grid()
-    #plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new} Kategorie {newname_cat} Land.png",dpi=300)
+    H_new = heights[height]
+    cat_new = "III/1"
+    u_new = u[cat_new][height]
+    newname_cat = str(cat_new).replace("/", "_")
+    C = c(X, Y, 0, H_new, u_new, cat_new)*1e6
+    plt.figure()
+    contours = plt.contour(X, Y, C, levels=[1,2,3,4,5,7,10,14,19,25], colors='k')
+    plt.clabel(contours, inline=True, fontsize=8, fmt='%.1f')
+    plt.xlabel("Entfernung x von der Quelle in Windrichtung in m")
+    plt.ylabel("Entfernung y von der Quelle senkrecht zur Windrichtung in m")
+    plt.title(f"Ausbreitungskategorie {cat_new}, Höhe {H_new} m, Land")
+    plt.xlim(-100,3500)
+    plt.grid()
+    plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new} Kategorie {newname_cat} Land.png",dpi=300)
