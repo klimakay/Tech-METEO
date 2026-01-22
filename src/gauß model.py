@@ -85,7 +85,7 @@ X,Y=np.meshgrid(x,y)
 
 #for height in range(len(heights)):
     H_new = heights[height]
-    cat_new = "III/1"
+    cat_new = "I"
     u_new = u[cat_new][height]
     newname_cat = str(cat_new).replace("/", "_")
     C = c(X, Y, 0, H_new, u_new, cat_new)*1e6
