@@ -83,7 +83,7 @@ x=np.linspace(1,3500)
 y=np.linspace(-400,401)
 X,Y=np.meshgrid(x,y)
 
-#for height in range(len(heights)):
+for height in range(len(heights)):
     H_new = heights[height]
     cat_new = "I"
     u_new = u[cat_new][height]
