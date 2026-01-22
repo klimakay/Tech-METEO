@@ -79,8 +79,8 @@ for disp in range(len(disp_cat)):
 
 # plot the distribution of the emissions
 # define the lateral coordinate
-x=np.linspace(1,3500)
-y=np.linspace(-400,401)
+x=np.linspace(1,14500)
+y=np.linspace(-1200,1201)
 X,Y=np.meshgrid(x,y)
 
 for height in range(len(heights)):
