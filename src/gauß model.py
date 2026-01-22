@@ -9,7 +9,7 @@ output_path = BASE_DIR / 'output'
 output_path.mkdir(parents=True, exist_ok=True)
 
 #define constants for effective plum heights up to 50 m
-F={"I":1.294, "II": 0.801, "III/1": 0.640, "III/2":0.695, "IV": 0.876, "V": 1.503}
+F={"I":1.294, "II": 0.801, "III/1": 0.640, "III/2":0.659, "IV": 0.876, "V": 1.503}
 G={"I":0.241, "II": 0.264, "III/1": 0.215, "III/2":0.165, "IV": 0.127, "V": 0.151}
 f={"I":0.718, "II": 0.754, "III/1": 0.784, "III/2":0.807, "IV": 0.823, "V": 0.833}
 g={"I":0.662, "II": 0.774, "III/1": 0.885, "III/2":0.996, "IV": 1.108, "V": 1.219}
