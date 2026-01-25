@@ -102,4 +102,4 @@ for height in range(len(heights)):
     plt.xlim(-100,14500)
     plt.grid()
     #plt.show()
-    plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new} Kategorie {newname_cat} Stadt.png",dpi=300)
+    #plt.savefig(output_path/f"Immissionskonzentration in Höhe {H_new} Kategorie {newname_cat} Stadt.png",dpi=300)
