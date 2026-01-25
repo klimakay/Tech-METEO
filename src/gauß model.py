@@ -1,3 +1,7 @@
+"""
+All functions and plots are stored and created here for the gauß model
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
